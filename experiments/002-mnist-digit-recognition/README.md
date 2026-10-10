@@ -2,6 +2,7 @@
 
 A small neural network that learns to recognize handwritten digits (0–9) from 28×28 pixel images, using the classic [MNIST](https://en.wikipedia.org/wiki/MNIST_database) dataset.
 
+
 ## Goal
 
 Move from experiment 001 (one neuron, one number in, one number out) to a real classification problem:
