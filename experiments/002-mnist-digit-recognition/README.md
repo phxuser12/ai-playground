@@ -28,6 +28,19 @@ uv run python train.py
 
 The first run downloads MNIST (~64 MB) into `data/`, which is git-ignored.
 
+## Data source
+
+`datasets.MNIST(..., download=True)` from `torchvision` downloads the four original MNIST files from PyTorch's mirror on AWS S3, `https://ossci-datasets.s3.amazonaws.com/mnist/`. Its listed fallback, Yann LeCun's original site `http://yann.lecun.com/exdb/mnist/`, no longer serves the files (it returns 404), so in practice the data comes from S3. Each file is checked against an MD5 checksum and then extracted into `data/MNIST/raw/`:
+
+| File | Contents |
+|---|---|
+| `train-images-idx3-ubyte.gz` | 60,000 training images (28×28) |
+| `train-labels-idx1-ubyte.gz` | 60,000 training labels (0–9) |
+| `t10k-images-idx3-ubyte.gz` | 10,000 test images |
+| `t10k-labels-idx1-ubyte.gz` | 10,000 test labels |
+
+MNIST was created by Yann LeCun, Corinna Cortes, and Christopher J.C. Burges from handwriting samples collected by NIST (the US National Institute of Standards and Technology).
+
 ## Results
 
 Training takes about 25 s on a CPU and reaches **~96% test accuracy** after 3 epochs:
