@@ -5,14 +5,14 @@ services:
       - "11434:11434"
     volumes:
       - ollama:/root/.ollama
-    # GPU (NVIDIA): uncomment, needs nvidia-container-toolkit
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
+    # GPU (NVIDIA): needs nvidia-container-toolkit; remove this block for CPU-only
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
 
 volumes:
   ollama:
