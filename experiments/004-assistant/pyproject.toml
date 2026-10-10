@@ -1,0 +1,10 @@
+[project]
+name = "004-assistant"
+version = "0.1.0"
+description = "Streamlit chat UI streaming responses from a local Ollama LLM"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ollama>=0.6.0",
+    "streamlit>=1.50.0",
+]
