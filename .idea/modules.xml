@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/001-pytorch-linear-regression.iml" filepath="$PROJECT_DIR$/.idea/001-pytorch-linear-regression.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/002-mnist-digit-recognition.iml" filepath="$PROJECT_DIR$/.idea/002-mnist-digit-recognition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ai-playground.iml" filepath="$PROJECT_DIR$/.idea/ai-playground.iml" />
+    </modules>
+  </component>
+</project>
