@@ -1,10 +1,11 @@
 [project]
 name = "004-assistant"
 version = "0.1.0"
-description = "Streamlit chat UI streaming responses from a local Ollama LLM"
+description = "Assistant with a Python (FastAPI) backend and a TypeScript UI, streaming responses from a local Ollama LLM"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.143.0",
     "ollama>=0.6.0",
-    "streamlit>=1.50.0",
+    "uvicorn[standard]>=0.54.0",
 ]
